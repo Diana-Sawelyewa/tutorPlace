@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/svg+xml" href="public/icons/circle.svg">
+      <link rel="stylesheet" href="public/css/reset.min.css">
+      <link rel="stylesheet" href="public/css/style.min.css">
+      <title>Нейросеть может все</title>
+    </head>
+    <body>
+            <div class="container flex header">
+            <div class="header__logo flex">
+                <div class="circle"></div><div class="name">AI</div>
+            </div>
+            <nav class="header__nav flex">
+                <a class="header__nav__item" href="#main">Главная</a>
+                <a class="header__nav__item" href="#advantages">Преимущества</a>
+                <a class="header__nav__item header__nav__item_account">Личный кабинет</a>
+            </nav>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <a class="sidebar__item" href="#main">Главная</a>
+            <a class="sidebar__item" href="#advantages">Преимущества</a>
+            <button class="flex button">Погрузиться в новый мир</button>
+        </div>
+        <section class="container flex banner" id="main">
+            <div class="banner__text">
+                <h1>Нейросеть<br><span>может все!</span></h1>
+                <h3>Мы уже живем в этой удивительной реальности</h3>
+                <button class="flex btn-pop button">Погрузиться в новый мир</button>
+            </div>
+            <div class="banner__picture">
+                <img src="public/img/OBJECTS.png" alt="">
+            </div>
+        </section>
+        <section class="container advantages" id="advantages">
+            <h2>Преимущества курса</h2>
+            <h3>Поможем создать <span>корректный промт</span>, чтобы вы получили максимально корректный вариант под ваши нужды!</h3>
+            <div class="background-text">Преимущества</div>
+            <div class="grid">
+                <div class="grid__item"><img src="public/icons/icon1.svg" alt=""><div class="question">Хотите открыть бизнес?</div>
+            <p>Нейросеть поможет составить бизнес-план, рассчитать расходы, нарисовать логотип, найти место получше и станет вашим главным деловым партнером</p>
+            </div>
+                <div class="grid__item"><img src="public/icons/icon2.svg" alt=""><div class="question">Мечтаете об отпуске?</div>
+            <p>Нейросеть поможет найти место по вашим запросам, выбрать наилучший сезон, собрать чемодан, подыскать где остановиться и сделать ваш отпуск незабываемым</p>
+            </div>
+                <div class="grid__item"><img src="public/icons/icon3.svg" alt=""><div class="question">Вы студент и нуждаетесь в помощи в учебе?</div>
+            <p>Нет проблем! Нейросеть — ваш лучший друг, который поможет написать курсовую, решить сложный тест и подготовиться к экзаменам</p>
+            </div>
+                <div class="grid__item"><img src="public/icons/icon4.svg" alt=""><div class="question">Интересует здоровый образ жизни?</div>
+            <p>Нейросеть поделится советами по сбалансированному питанию, безопасным тренировкам и поддержке мотивации.</p>
+            </div>
+            </div>
+        </section>
+        <div class="modal">
+            <div class="modal__content">
+                <span class="close"><img src="public/icons/close.svg" alt=""></span>
+                <div class="offer">Овладей нейросетями!<br><span>Получи в подарок доступ ко всем курсам</span>
+                </div>
+                <img class="present" src="public/img/PRESENT.png" alt="">
+                <form action="#">
+                    <input name="email" type="text" placeholder="Введите e-mail">
+                    <div class="error">Ошибка</div>
+                    <button class="flex button">Оплатить</button>
+                </form>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <script src="public/js/bundle.js"></script>
+    </body>
+  </html>

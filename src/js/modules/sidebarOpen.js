@@ -10,7 +10,10 @@ function sidebarOpen() {
     item.addEventListener('click', ()=> {
         sidebar.classList.remove('active');
         burger.classList.remove('active');
-        overlay.classList.remove('active');
+        overlay.classList.remove('show');
+        setTimeout(() => {
+            overlay.classList.remove('active');;// Затем добавляем класс для анимации
+        }, 500);
         checkScroll();
     })
     })
@@ -18,7 +21,20 @@ function sidebarOpen() {
     burger.addEventListener('click', function() {
         sidebar.classList.toggle('active');
         burger.classList.toggle('active');
-        overlay.classList.toggle('active');
+        /* overlay.classList.toggle('active'); */
+        if (burger.classList.contains('active')) {
+            overlay.classList.add('active');
+            setTimeout(() => {
+                overlay.classList.add('show');// Затем добавляем класс для анимации
+            }, 5);
+        } else {
+            overlay.classList.remove('show');
+            setTimeout(() => {
+                overlay.classList.remove('active');;// Затем добавляем класс для анимации
+            }, 500);
+        }
+
+        
         checkScroll();
     });
 
@@ -26,7 +42,10 @@ function sidebarOpen() {
         if (!sidebar.contains(event.target) && !burger.contains(event.target)) {
         sidebar.classList.remove('active');
         burger.classList.remove('active');
-        overlay.classList.remove('active');
+        overlay.classList.remove('show');
+        setTimeout(() => {
+            overlay.classList.remove('active');;// Затем добавляем класс для анимации
+        }, 500);
         checkScroll();
         }
     });

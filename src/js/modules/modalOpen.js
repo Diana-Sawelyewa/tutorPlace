@@ -7,18 +7,27 @@ function modalOpen() {
     btns.forEach((item)=> {
     item.addEventListener('click', ()=> {
       modal.style.display = "flex";
+      setTimeout(() => {
+        modal.classList.add('show'); // Затем добавляем класс для анимации
+    }, 5);
       document.body.style.overflow = 'hidden';
     })
     })
     
     close.onclick = function() {
-      modal.style.display = "none";
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = "none"; 
+    }, 500);
       document.body.style.overflow = ''; 
     };
     
     window.addEventListener('click', function(event) {
     if (event.target == modal) {
-        modal.style.display = "none"; 
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = "none"; 
+      }, 500);
         document.body.style.overflow = ''; 
     }
     });
@@ -27,7 +36,10 @@ function modalOpen() {
     document.addEventListener('keydown', function(event) {
       if (modal.style.display === 'flex') {
     if (event.key === 'Escape') {
-            modal.style.display = 'none'; 
+            modal.classList.remove('show');
+            setTimeout(() => {
+              modal.style.display = "none"; 
+          }, 500);
             document.body.style.overflow = ''; 
           } else {
             return;

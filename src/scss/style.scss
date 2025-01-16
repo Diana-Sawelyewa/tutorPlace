@@ -260,6 +260,8 @@ body {
     overflow: hidden;
     background-color: rgba(12,13,18,.3);
     backdrop-filter: blur(18px);
+    opacity: 0;
+    transition: opacity 0.5s;
     &__content {
         outline: 3px solid #1B1A2C;
         border-radius: 24px;
@@ -338,6 +340,10 @@ body {
     }
 }
 
+.modal.show {
+    opacity: 1;
+}
+
 .overlay {
     z-index: 1;
     display: none; 
@@ -348,10 +354,15 @@ body {
     height: 100%; 
     background-color: rgba(12,13,18,.3);
     backdrop-filter: blur(18px);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .overlay.active {
     display: block; 
+}
+.overlay.show {
+    opacity: 1;
 }
 
 .button {
@@ -700,7 +711,8 @@ body {
 
 
     .header {
-        padding: 18px 0;
+        max-width: 100%;
+        padding: 18px 25px;
         &__logo {
             .circle {
                 width: 30px;
@@ -788,7 +800,7 @@ body {
 
 
     .header {
-        padding: 18px 0;
+        padding: 18px 20px;
         &__logo {
             .circle {
                 width: 26px;
@@ -852,9 +864,6 @@ body {
         }
     }
 
-    .header {
-        padding: 15px 0;
-    }
 
     .advantages {
 
@@ -912,7 +921,7 @@ body {
 
 
     .header {
-        padding: 18px 0;
+        padding: 14px 15px;
         &__logo {
             .circle {
                 width: 21px;

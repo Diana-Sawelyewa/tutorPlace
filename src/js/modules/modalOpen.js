@@ -8,7 +8,7 @@ function modalOpen() {
     item.addEventListener('click', ()=> {
       modal.style.display = "flex";
       setTimeout(() => {
-        modal.classList.add('show'); // Затем добавляем класс для анимации
+        modal.classList.add('show');
     }, 5);
       document.body.style.overflow = 'hidden';
     })

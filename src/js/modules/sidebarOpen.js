@@ -12,7 +12,7 @@ function sidebarOpen() {
         burger.classList.remove('active');
         overlay.classList.remove('show');
         setTimeout(() => {
-            overlay.classList.remove('active');;// Затем добавляем класс для анимации
+            overlay.classList.remove('active');
         }, 500);
         checkScroll();
     })
@@ -21,16 +21,15 @@ function sidebarOpen() {
     burger.addEventListener('click', function() {
         sidebar.classList.toggle('active');
         burger.classList.toggle('active');
-        /* overlay.classList.toggle('active'); */
         if (burger.classList.contains('active')) {
             overlay.classList.add('active');
             setTimeout(() => {
-                overlay.classList.add('show');// Затем добавляем класс для анимации
+                overlay.classList.add('show');
             }, 5);
         } else {
             overlay.classList.remove('show');
             setTimeout(() => {
-                overlay.classList.remove('active');;// Затем добавляем класс для анимации
+                overlay.classList.remove('active');
             }, 500);
         }
 
@@ -44,7 +43,7 @@ function sidebarOpen() {
         burger.classList.remove('active');
         overlay.classList.remove('show');
         setTimeout(() => {
-            overlay.classList.remove('active');;// Затем добавляем класс для анимации
+            overlay.classList.remove('active');
         }, 500);
         checkScroll();
         }
